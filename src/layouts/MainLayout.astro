@@ -1,31 +1,36 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import '../styles/tailwind.css';
-import 'animate.css';
+import "../styles/tailwind.css";
+import "animate.css";
 const { title } = Astro.props;
 ---
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{Astro.props.title}</title>
-	</head>
-	<body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <script src="https://kit.fontawesome.com/c5d83fc88a.js" crossorigin="anonymous"></script>
+    <title>{Astro.props.title}</title>
+  </head>
+  <body class="bg-[#E0DACE] text-[16px] md:text-[18px]">
+    <header>
+      <Header />
+    </header>
 
-		<header>
-			<Header></Header>
-		</header>
-		
-		<main>
-			<slot />
-		</main>
+    <main>
+      <slot />
+    </main>
 
-		<footer>
-			<Footer></Footer>
-		</footer>
-			
-	</body>
+    <footer>
+      <Footer />
+    </footer>
+  </body>
 </html>

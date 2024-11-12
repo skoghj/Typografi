@@ -1,15 +1,77 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import mockupbook from "../assets/images/book.png";
+import mockupbox from "../assets/images/box.png";
+import mockupwall from "../assets/images/wall.png";
+import lampr from "../assets/images/lamp-r.webp";
+import lampl from "../assets/images/lamp-l.webp";
+import metro from "../assets/images/metropolitan.webp";
+import flowerpaint from "../assets/images/flowerpaint.jpg";
+import leaves1 from "../assets/images/leaves1.jpg";
+import leaves2 from "../assets/images/leaves2.jpg";
+import leaves3 from "../assets/images/leaves3.jpg";
+import process from "../assets/images/illustprocess.svg";
+import building from "../assets/images/copenhagen.svg";
+import moodboard from "../assets/images/moodboard.svg";
+import egenskabe from "../assets/images/egenskaber.svg";
+import leavesillust from "../assets/images/leaves-illust.svg";
+import flower from "../assets/images/flower2.webp";
+import redflower from "../assets/images/redflower.webp";
+import whiteflower from "../assets/images/whiteflower.webp";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+
+<MainLayout title="TYPOGRAFI">
+  <article class="W-full pt-10">
+    <div class="flex flex-col gap-6 relative">
+      <div class="font-kbenhavn text-[42px] font-semibold flex mx-auto text-[#BC170B]">
+        <h1 class="tracking-[-0.1em]">K<span class="-ml-2">Ø </span><span class="-ml-2">B</span><span class="pl-1">ENH <span class="-pl-1">A</span><span class="-ml-2">V</span><span class="-ml-5 mr-1">N</span></span></h1>
+      </div>
+      <div class="flex justify-start items-start w-[150px]"><Image src={lampr} alt="street lamp" /></div>
+      <div class="absolute top-20 right-6 block md:hidden"><Image src={leavesillust} alt="illustration of leaves" class="w-16 object-cover animate-spin-leaves" /></div>
+      <div class="absolute top-60 right-50 block md:hidden"><Image src={leavesillust} alt="illustration of leaves" class="w-16 object-cover animate-spin-leaves" /></div>
+      <div class="absolute top-60 right-20 block md:hidden"><Image src={redflower} alt="illustration of flower" class="w-10 object-cover animate-spin-leaves" /></div>
+      <div class="flex items-end justify-right"><Image src={metro} alt="metropolitain in paris" /></div>
+    </div>
+    <div class="flex flex-col mx-auto px-6">
+      <h1 class="averia-libre-bold text-2xl">Ideer</h1>
+      <p class="font-alata font-light">Denne typografi er inspireret af Art Nouveau-kunsten. Målet var at skabe et design, der forener Art Nouveau-stilens klassiske skønhed med en moderne følelse, og derfor har jeg inkorporeret de organiske kurver og fine dekorative elementer fra naturen i typografien.</p>
+      <Image src={flowerpaint} alt="nouveau style paint" class="w-full h-[180px] object-cover pt-4" />
+    </div>
+    <div class="flex flex-col mx-auto px-6 pt-4">
+      <Image src={leaves2} alt="leaves naturlig inspireret" class="w-full h-[180px] object-cover" />
+      <h1 class="averia-libre-bold text-2xl pt-2">Koncept</h1>
+      <p class="font-alata font-light">Konceptet bag denne skrifttype er at forene naturlige, flydende kurver inspireret af Art Nouveau-stilen med en elegant og moderne æstetik. Ved at integrere bløde kurver og delikate detaljer i form af dråbelignende elementer, sigter designet mod at skabe en følelse af raffineret elegance og unik karakter.</p>
+    </div>
+    <div class="flex flex-col mx-auto px-6 pt-4 gap-4">
+      <div>
+        <Image src={moodboard} alt="moodboard" class="w-full" />
+        <Image src={process} alt="illustrator process" class="w-full pt-4" />
+        <h1 class="averia-libre-bold text-2xl pt-2">Process</h1>
+        <p class="font-alata font-light">Jeg brugte Illustrator til at designe en skrifttype. Først oprettede jeg retningslinjer og anvendte en eksisterende skrifttype ovenpå dem. Derefter brugte jeg funktionen "Udvid" (Expand) og begyndte at ændre skrifttypen. Jeg strakte den, tilføjede dråbeformede elementer og kurver. Efter disse tilpasninger brugte jeg Calligraphr til at oprette en skabelon, hvilket resulterede i en skrifttype i både TTF- og OTF-format.</p>
+      </div>
+      <div>
+        <Image src={egenskabe} alt="font egenskaber" class="w-full" />
+        <h1 class="averia-libre-bold text-2xl pt-2">Egenskaber</h1>
+        <p class="font-alata font-light">Denne skrifttype har et karakteristisk serif-design med bløde, organiske kurver. De skarpe hjørner ved enden af bogstaverne er formet som dråber, hvilket giver en unik, flydende æstetik. Denne detalje tilfører skrifttypen en mere udtryksfuld og elegant karakter. Skrifttypen er primært udviklet til display-brug, hvilket gør den ideel til overskrifter, plakater og branding, men den er mindre velegnet til længere brødtekster på grund af dens dekorative elementer.</p>
+      </div>
+    </div>
+
+    <div class="w-full flex flex-col pt-6">
+      <div class="flex justify-end"><Image src={lampl} alt="street lamp" class="w-[150px]" /></div>
+      <Image src={building} alt="Axel Towers in copenhagen" class="w-full" />
+    </div>
+    <div class="mx-auto justify-center flex flex-col w-full bg-[#BC170B]">
+      <div class="flex flex-col gap-4 px-6 py-6">
+        <Image src={mockupbook} alt="mockup book cover" />
+        <Image src={mockupbox} alt="mockup box package" />
+        <Image src={mockupwall} alt="mockup wall sign" />
+      </div>
+    </div>
+    <!-- <div class="font-packman text-2xl flex pt-20">
+      <h1>COPENHAGEN ANNYENG</h1>
+    </div>-->
+  </article>
 </MainLayout>

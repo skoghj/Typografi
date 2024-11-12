@@ -1,5 +1,24 @@
 ---
+import Link from "../components/Link.astro";
 ---
-<div>
-Header - tilføj navigation mm.
+
+<div x-data="{ showmenu: false }" class="py-4 static w-full justify-end text-[18px] md:w-full md:py-4">
+  <div id="navbar" class="flex flex-row justify-between px-6">
+    <div id="logo" class="flex items-center justify-center gap-1 font-schibsted">HJ <span class="w-2 h-2 bg-green-500 rounded-full"></span></div>
+    <nav id="desktopmenu" class="hidden md:flex">
+      <ul class="flex flex-row gap-8 font-schibsted">
+        <li class="hover:text-[#BC170B]"><Link href="#">Koncenpt</Link></li>
+        <li class="hover:text-[#BC170B]"><Link href="#">Om font </Link></li>
+        <li class="hover:text-[#BC170B]"><Link href="#">Mockup </Link></li>
+      </ul>
+    </nav>
+    <button id="burgermenu" class="md:hidden" x-on:click="showmenu = ! showmenu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <nav id="mobilmenu" class="flex flex-col content-center items-end p-4 text-[16px]" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+    <ul class="font-schibsted">
+      <li class="hover:text-[#BC170B]"><Link href="#herounit">Koncenpt</Link></li>
+      <li class="hover:text-[#BC170B]"><Link href="#kapitler">Om font </Link></li>
+      <li class="hover:text-[#BC170B]"><Link href="#form">Mockup </Link></li>
+    </ul>
+  </nav>
 </div>
