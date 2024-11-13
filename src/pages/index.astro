@@ -3,86 +3,139 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import mockupbook from "../assets/images/book.png";
-import mockupbox from "../assets/images/box.png";
-import mockupwall from "../assets/images/wall.png";
+import mockupbook from "../assets/images/bookmockup.webp";
+import mockupbox from "../assets/images/boxpackage.webp";
+import businesscard from "../assets/images/businesscardmockup.webp";
+import cafe from "../assets/images/cafemockup.webp";
 import lampr from "../assets/images/lamp-r.webp";
 import lampl from "../assets/images/lamp-l.webp";
 import metro from "../assets/images/metropolitan.webp";
-import flowerpaint from "../assets/images/flowerpaint.jpg";
-import leaves1 from "../assets/images/leaves1.jpg";
-import leaves2 from "../assets/images/leaves2.jpg";
-import leaves3 from "../assets/images/leaves3.jpg";
-import process from "../assets/images/illustprocess.svg";
+import leaves3 from "../assets/images/leaves3.webp";
+import process from "../assets/images/process1.svg";
 import building from "../assets/images/copenhagen.svg";
-import moodboard from "../assets/images/moodboard.svg";
+import moodboard from "../assets/images/moodboard-ide.svg";
 import egenskabe from "../assets/images/egenskaber.svg";
 import leavesillust from "../assets/images/leaves-illust.svg";
-import flower from "../assets/images/flower2.webp";
+import metal from "../assets/images/metalmockup.webp";
+import ecobag from "../assets/images/ecobagmockup.webp";
 import redflower from "../assets/images/redflower.webp";
-import whiteflower from "../assets/images/whiteflower.webp";
-import blomster from "../assets/images/blomster.jpg";
+import blomster from "../assets/images/blomster.webp";
+import label1 from "../assets/images/label1.webp";
+import label2 from "../assets/images/label2.webp";
+import label3 from "../assets/images/label4.webp";
 ---
 
 <MainLayout title="TYPOGRAFI">
   <article class="W-full pt-10">
-    <div class="flex flex-col gap-4 relative md:grid md:[grid-template-columns:1fr_1.5fr_1fr] md:grid-rows-auto">
-      <div class="font-kbenhavn text-[42px] mx-auto s:text-[62px] sm:text-[72px] md:text-[80px] md:mx-0 md:justify-start font-semibold flex text-[#BC170B] md:grid md:col-start-2 md:col-end-4 md:text-left">
+    <div class="flex flex-col relative lg:grid lg:[grid-template-columns:1fr_1.1fr_1fr] lg:grid-rows-auto lg:gap-2">
+      <div class="font-kbenhavn text-[42px] mx-auto sm:text-[44px] md:text-[62px] lg:text-[90px] xl:text-[120px] lg:mx-0 lg:justify-start font-semibold grid grid-cols-1 text-[#BC170B] lg:grid lg:col-start-1 lg:col-end-4 lg:row-start-1 lg:row-end-2 lg:pl-80 md:pt-6 md:col-start-2">
         <h1 class="tracking-[-0.1em]">K<span class="-ml-2">Ø </span><span class="-ml-2">B</span><span class="pl-1">ENH <span class="-pl-1">A</span><span class="-ml-2">V</span><span class="-ml-5 mr-1">N</span></span></h1>
       </div>
-      <div class="flex justify-start items-start w-[150px] md:w-[250px] md:grid md:col-start-1 col-end-2 row-start-1 row-end-2"><Image src={lampr} alt="street lamp" /></div>
+      <div class="flex justify-start items-start w-[150px] lg:w-[250px] lg:grid lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2"><Image src={lampr} alt="street lamp" /></div>
 
-      <div class="absolute top-20 right-6 block md:hidden"><Image src={leavesillust} alt="illustration of leaves" class="w-16 object-cover animate-spin-leaves" /></div>
-      <div class="absolute top-60 right-50 block md:hidden"><Image src={leavesillust} alt="illustration of leaves" class="w-16 object-cover animate-spin-leaves" /></div>
-      <div class="absolute top-60 right-20 block md:hidden"><Image src={redflower} alt="illustration of flower" class="w-10 object-cover animate-spin-leaves" /></div>
-      <div class="flex items-end justify-right md:grid md:place-items-start md:col-start-2 md:col-end-3 md:row-start-2 md:mx-auto"><Image src={metro} alt="metropolitain in paris" /></div>
+      <div class="absolute top-20 right-6 block lg:hidden"><Image src={leavesillust} alt="illustration of leaves" class="w-16 object-cover animate-spin-leaves" /></div>
+      <div class="absolute top-60 right-50 block lg:hidden"><Image src={leavesillust} alt="illustration of leaves" class="w-16 object-cover animate-spin-leaves" /></div>
+      <div class="absolute top-60 right-20 block lg:hidden"><Image src={redflower} alt="illustration of flower" class="w-10 object-cover animate-spin-leaves" /></div>
+      <div class="flex items-end justify-right lg:grid lg:place-items-start lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:mx-auto lg:p-4 slideUp"><Image src={metro} alt="metropolitain in paris" /></div>
 
-      <div class="flex flex-col mx-auto px-6 md:mx-0 md:grid md:col-start-1 md:col-end-2 md:row-start-2 md:row-end-3 md:place-end">
-        <div>
-          <h1 class="averia-libre-bold text-2xl">Ideer</h1>
-          <p class="font-alata font-light">Denne typografi er inspireret af Art Nouveau-kunsten. Målet var at skabe et design, der forener Art Nouveau-stilens klassiske skønhed med en moderne følelse, og derfor har jeg inkorporeret de organiske kurver og fine dekorative elementer fra naturen i typografien.</p>
-          <Image src={flowerpaint} alt="nouveau style paint" class="w-full h-[180px] object-cover pt-4 md:h-[200px]" />
+      <div class="flex flex-col mx-auto px-6 md:px-16 lg:px-0 lg:mx-0 lg:grid lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3 lg:place-end relative" id="koncept">
+        <div class="lg:pl-20 xl:pl-20 2xl:pl-40 lg:pt-24 pt-10slideLeft">
+          <h1 class="averia-libre-bold text-2xl md:text-4xl">Ideer</h1>
+          <p class="font-alata font-light pt-2">København typografien er inspireret af Art Nouveau-kunsten, især Hector Guimards ikoniske Métropolitain-stil. Målet var at forene Art Nouveau's klassiske skønhed med en moderne følelse ved at integrere organiske kurver og naturinspirerede dekorative elementer, hvilket skaber en elegant og nutidig æstetik.</p>
+          <Image src={moodboard} alt="moodboard" class="w-full pt-4" />
         </div>
       </div>
-      <div class="flex flex-col mx-auto px-6 pt-4 overflow-x-hidden relative">
-        <div class="absolute top-[140px] right-[-20%] overflow-x-hidden hidden md:grid md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-2">
-          <Image src={blomster} alt="flower" class="" />
-        </div>
-        <Image src={leaves2} alt="leaves naturlig inspireret" class="w-full h-[180px] object-cover md:h-[200px]" />
 
-        <h1 class="averia-libre-bold text-2xl pt-2">Koncept</h1>
-        <p class="font-alata font-light">Konceptet bag denne skrifttype er at forene naturlige, flydende kurver inspireret af Art Nouveau-stilen med en elegant og moderne æstetik. Ved at integrere bløde kurver og delikate detaljer i form af dråbelignende elementer, sigter designet mod at skabe en følelse af raffineret elegance og unik karakter.</p>
+      <div class="relative flex flex-col mx-auto px-6 md:px-16 pt-4 lg:px-0 lg:pt-0 overflow-x-hidden">
+        <div class="hidden lg:grid lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2 lg:absolute lg:top-[-100px] lg:left-[100px] lg:w-full slideRight overflow-x-hidden">
+          <Image src={blomster} alt="flower" class="w-full lg:object-cover" />
+        </div>
+        <div class="lg:pr-20 2xl:pr-40 lg:pt-40 slideRight">
+          <Image src={leaves3} alt="leaves naturlig inspireret" class="w-full object-cover" />
+          <h1 class="averia-libre-bold text-2xl md:text-4xl pt-2">Koncept</h1>
+          <p class="font-alata font-light pt-2">Konceptet bag denne skrifttype er at forene naturlige, flydende kurver inspireret af Art Nouveau-stilen med en elegant og moderne æstetik. Ved at integrere bløde kurver og delikate detaljer i form af dråbelignende elementer, sigter designet mod at skabe en følelse af raffineret elegance og unik karakter.</p>
+        </div>
       </div>
     </div>
-    <div class="md:grid md:[grid-template-columns:1fr_1fr_1.5fr] md:grid-rows-auto md:gap-4">
-      <div class="px-4 py-4 md:py-0 md:justify-end md:items-end md:col-start-1 md:col-end-2 md:row-start-2 md:row-end-3">
-        <Image src={moodboard} alt="moodboard" class="w-full" />
+    <div class="lg:grid lg:[grid-template-columns:1fr_1fr_1.2fr] md:px-16 lg:pr-0 lg:pl-20 2xl:pl-40 lg:grid-rows-auto lg:gap-4 lg:pt-20 lg:pb-20">
+      <div class="py-4 px-6 md:px-0 lg:py-0 lg:justify-end lg:items-end lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3" id="omfont">
+        <Image src={process} alt=" moodboard" class="w-full" />
 
-        <h1 class="averia-libre-bold text-2xl pt-2">Process</h1>
-        <p class="font-alata font-light">Jeg brugte Illustrator til at designe en skrifttype. Først oprettede jeg retningslinjer og anvendte en eksisterende skrifttype ovenpå dem. Derefter brugte jeg funktionen "Udvid" (Expand) og begyndte at ændre skrifttypen. Jeg strakte den, tilføjede dråbeformede elementer og kurver. Efter disse tilpasninger brugte jeg Calligraphr til at oprette en skabelon, hvilket resulterede i en skrifttype i både TTF- og OTF-format.</p>
+        <h1 class="averia-libre-bold text-2xl md:text-4xl pt-2">Process</h1>
+        <p class="font-alata font-light pt-2">Jeg brugte Illustrator til at designe en skrifttype. Først oprettede jeg retningslinjer og anvendte en eksisterende skrifttype ovenpå dem. Derefter brugte jeg funktionen "Udvid" (Expand) og begyndte at ændre skrifttypen. Jeg strakte den, tilføjede dråbeformede elementer og kurver. Efter disse tilpasninger brugte jeg Calligraphr til at oprette en skabelon, hvilket resulterede i en skrifttype i både TTF- og OTF-format.</p>
       </div>
-      <div class="px-4 md:col-start-2 md:col-end-3 md:row-start-2 md:row-end-">
+      <div class="md:col-start-2 md:col-end-3 md:row-start-2 md:row-end-3 px-6 md:px-0">
         <Image src={egenskabe} alt="font egenskaber" class="w-full" />
-        <h1 class="averia-libre-bold text-2xl pt-2">Egenskaber</h1>
-        <p class="font-alata font-light">Denne skrifttype har et karakteristisk serif-design med bløde, organiske kurver. De skarpe hjørner ved enden af bogstaverne er formet som dråber, hvilket giver en unik, flydende æstetik. Denne detalje tilfører skrifttypen en mere udtryksfuld og elegant karakter. Skrifttypen er primært udviklet til display-brug, hvilket gør den ideel til overskrifter, plakater og branding, men den er mindre velegnet til længere brødtekster på grund af dens dekorative elementer.</p>
+        <h1 class="averia-libre-bold text-2xl md:text-4xl pt-2">Egenskaber</h1>
+        <p class="font-alata font-light py-2">Denne skrifttype har et karakteristisk serif-design med bløde, organiske kurver. De skarpe hjørner ved enden af bogstaverne er formet som dråber, hvilket giver en unik, flydende æstetik. Denne detalje tilfører skrifttypen en mere udtryksfuld og elegant karakter. Skrifttypen er primært udviklet til display-brug, hvilket gør den ideel til overskrifter, plakater og branding, men den er mindre velegnet til længere brødtekster på grund af dens dekorative elementer.</p>
       </div>
-      <div class="md:col-start-3 col-end-4 md:row-start-2 row-end-3"><Image src={building} alt="Axel Towers in copenhagen" class="w-full md:col-start-5 md:col-end-6 md:row-start-2 md:row-end-3" /></div>
+      <div class="pt-4 md:pt-10 lg:pt-0 md:col-start-3 col-end-4 md:row-start-2 row-end-3"><Image src={building} alt="Axel Towers in copenhagen" class="w-full md:col-start-5 md:col-end-6 md:row-start-2 md:row-end-3" /></div>
+      <div class="flex md:flex md:pb-10 lg:pb-0">
+        <div class="swing">
+          <Image src={label1} alt="label" />
+        </div>
+        <div class="swing delay-75">
+          <Image src={label2} alt="label" />
+        </div>
+        <div class="swing delay-75">
+          <Image src={label3} alt="label" />
+        </div>
+      </div>
 
-      <div class="flex w-full md:grid md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-2"><Image src={lampl} alt="street lamp" class="md:justify-self-end w-[150px] md:w-[250px]" /></div>
+      <div class="hidden w-full lg:grid lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2"><Image src={lampl} alt="street lamp" class="md:justify-self-end w-[150px] md:w-[250px]" /></div>
     </div>
-    <div class="mx-auto justify-center flex flex-col w-full bg-[#BC170B] md:py-10">
-      <div>
-        <h1 class="averia-libre-bold text-2xl pt-2">Mockup</h1>
-        <p class="font-alata font-light w-1/3">Denne skrifttype har et karakteristisk serif-design med bløde, organiske kurver. De skarpe hjørner ved enden af bogstaverne er formet som dråber, hvilket giver en unik, flydende æstetik. Denne detalje tilfører skrifttypen en mere udtryksfuld og elegant karakter. Skrifttypen er primært udviklet til display-brug, hvilket gør den ideel til overskrifter, plakater og branding, men den er mindre velegnet til længere brødtekster på grund af dens dekorative elementer.</p>
+    <div class="mx-auto justify-center flex flex-col w-full bg-[#BC170B] px-6 md:py-10 md:px-10 lg:px-20 2xl:px-40" id="mockup">
+      <div class="py-10 md:px-10">
+        <h1 class="averia-libre-bold text-2xl md:text-4xl pt-2">Mockup</h1>
+        <p class="font-alata font-light w-full md:w-2/3 py-2">København-skriften er en alsidig display-font, der elegant forener klassisk skønhed med moderne æstetik. Med sine flydende kurver og fine detaljer skaber den en visuelt tiltalende og unik identitet. Den er særligt velegnet til brands, der ønsker et feminint og organisk udtryk, og bidrager til en stilfuld og eksklusiv atmosfære. Skrifttypen er ideel til forskellige designprojekter såsom bogomslag, emballage og visitkort, og er et fremragende valg til at fremhæve et brand og gøre det mere iøjnefaldende.</p>
       </div>
-      <div class="grid-cols-1 gap-4 px-6 py-6 md:grid md:grid-cols-3">
-        <Image src={mockupbook} alt="mockup book cover" />
-        <Image src={mockupbox} alt="mockup box package" />
-        <Image src={mockupwall} alt="mockup wall sign" />
+      <div class="mangeelementerinview grid-cols-1 md:grid-cols-2 gap-4 object-cover md:grid lg:grid-cols-3 md:pt-4 overflow-x-hidden">
+        <Image src={mockupbook} alt="mockup book cover" class="mangeelementer1" />
+        <Image src={mockupbox} alt="mockup box package" class="mangeelementer2" />
+        <Image src={businesscard} alt="mockup businesscard" class="mangeelementer3" />
+        <Image src={cafe} alt="mockup cafe sign" class="mangeelementer4" />
+        <Image src={metal} alt="mockup metal material" class="mangeelementer5" />
+        <Image src={ecobag} alt="mockup ecobag" class="mangeelementer6" />
       </div>
     </div>
-    <!-- <div class="font-packman text-2xl flex pt-20">
-      <h1>COPENHAGEN ANNYENG</h1>
-    </div>-->
   </article>
 </MainLayout>
+<script>
+  //inview animation////////////////////////////////////////////
+  import { inView, animate, scroll, timeline } from "motion";
+  const slideRight = document.querySelectorAll(".slideRight");
+  inView(slideRight, ({ target }) => {
+    target.classList.add("animate__animated", "animate__slideInRight", "animate__delay-1s");
+  });
+  const slideLeft = document.querySelectorAll(".slideLeft");
+  inView(slideLeft, ({ target }) => {
+    target.classList.add("animate__animated", "animate__slideInLeft", "animate__delay-1s");
+  });
+  const slideUp = document.querySelectorAll(".slideUp");
+  inView(slideUp, ({ target }) => {
+    target.classList.add("animate__animated", "animate__slideInUp", "animate__delay-1s");
+  });
+  const swing = document.querySelectorAll(".swing");
+  inView(swing, ({ target }) => {
+    target.classList.add("animate__animated", "animate__swing", "animate__delay-1s");
+  });
+
+  /* Mange elementer der animerer ind */
+  inView(".mangeelementerinview", () => {
+    animate(".mangeelementer1", { x: [-2000, 0], y: [-50, 0] }, { duration: 1 });
+    animate(".mangeelementer2", { x: [-1500, 0], y: [-100, 0] }, { duration: 3 });
+    animate(".mangeelementer3", { x: [-1000, 0], y: [-150, 0] }, { duration: 3 });
+    animate(".mangeelementer4", { x: [1750, 0] }, { duration: 2 });
+    animate(".mangeelementer5", { x: [-2000, 0], y: [-100, 0] }, { duration: 1 });
+    animate(".mangeelementer6", { x: [2000, 0] }, { duration: 2 });
+
+    return () => {
+      animate(".mangeelementer1", { x: [-2000, 0], y: [-50, 0] }, { duration: 1 });
+      animate(".mangeelementer2", { x: [-1500, 0], y: [-100, 0] }, { duration: 3 });
+      animate(".mangeelementer3", { x: [-1000, 0], y: [-150, 0] }, { duration: 3 });
+      animate(".mangeelementer4", { x: [1750, 0] }, { duration: 2 });
+      animate(".mangeelementer5", { x: [-2000, 0], y: [-100, 0] }, { duration: 1 });
+      animate(".mangeelementer6", { x: [2000, 0] }, { duration: 2 });
+    };
+  });
+</script>
